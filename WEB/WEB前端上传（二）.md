@@ -82,7 +82,7 @@ export default {
 
 我们将替换文件 `pages/index.js` 里面的内容。
 
-```jsx {.line-numbers}
+```jsx
 // pages/index.js
 import React from 'react';
 import { Upload, Button, Icon } from 'antd';
@@ -135,7 +135,7 @@ class Index extends React.Component {
 
 在 `utils/` 文件夹下创建一个文件 `webUploader.js`
 
-```javascript {.line-numbers}
+```javascript
 // utils/webUploader.js
 import $ from 'jquery';
 import WebUploader from 'webuploader';
@@ -226,14 +226,13 @@ function createUploader(url, option) {
 export default createUploader;
 ```
 
-### 总结
+## 总结
 
 本文写的比较简单，没有过程说明，直接粘贴了代码。目前找寻找什么样的表述方式比较合适, 是（一）的啰嗦还是（二）的简洁。
 请各位同学批评指正。
 
 #### 相关资料
 
-- [WEB 前端上传（一）](./01.WEB前端上传（一）.md)
 - [ReactJS 用于构建用户界面的 JavaScript 库](https://reactjs.org/)
 - [UmiJS 可插拔的企业级 ReactJS 应用框架](https://umijs.org/zh/)
 - [Ant-Design 开箱即用的高质量 React 组件](https://ant.design/index-cn)

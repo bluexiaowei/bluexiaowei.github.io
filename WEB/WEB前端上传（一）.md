@@ -15,7 +15,7 @@
 
 #### 前端-流程设计
 
-![前端上传流程图](./static/01-01.png '前端上传流程图')
+![前端上传流程图](../static/01-01.png '前端上传流程图')
 
 #### 前端-目录结构
 
@@ -478,4 +478,3 @@ router.post('/upload/merge', function(req, res) {
 - [百度前端 Web Uploader 组件官方地址](http://fex.baidu.com/webuploader)
 - [Express 是基于 Node 的 WEB 开发框架](http://www.expressjs.com.cn/starter/generator.html)
 - [楼主百度搜索 webuploader express 借鉴的博客](https://blog.csdn.net/xiazhiqiang01/article/details/52677484)
-- [WEB 前端上传（二）](./02.WEB前端上传（二）.md)
