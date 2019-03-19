@@ -31,13 +31,17 @@
     <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
     <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
+      const title = document.title.replace(' - Document', '');
       const gitalk = new Gitalk({
         clientID: '4f447d08f9b658360d67',
         clientSecret: '32abc4ff653864f6e5f35cc0213e3f1d7b41a85f',
         repo: 'bluexiaowei.github.io',
         owner: 'bluexiaowei',
         admin: ['bluexiaowei'],
-        id: document.title.replace(' - Document', ''),
+        title: title,
+        id: title,
+        body: title,
+        labels: ['Blog'],
         distractionFreeMode: false
       });
     </script>
