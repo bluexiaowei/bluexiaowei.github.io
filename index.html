@@ -10,9 +10,11 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css" />
   </head>
   <body>
     <div id="app"></div>
+    <div id="gitalk-container"></div>
     <script>
       window.$docsify = {
         loadSidebar: true,
@@ -26,5 +28,18 @@
     <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
     <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
     <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+      const gitalk = new Gitalk({
+        clientID: '4f447d08f9b658360d67',
+        clientSecret: '32abc4ff653864f6e5f35cc0213e3f1d7b41a85f',
+        repo: 'bluexiaowei.github.io',
+        owner: 'bluexiaowei',
+        admin: ['bluexiaowei'],
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+      });
+    </script>
   </body>
 </html>
