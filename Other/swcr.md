@@ -4,7 +4,7 @@
 
 ## 使用例子
 
-> umijs + typesciprt + less
+> umijs + typescript + less
 
 ```shell
 $ swcr -i src \
