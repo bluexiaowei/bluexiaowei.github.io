@@ -1,0 +1,22 @@
+{
+  "name": "bluexiaowei.github.io",
+  "version": "1.0.0",
+  "description": "## 前言",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx docsify serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluexiaowei/bluexiaowei.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluexiaowei/bluexiaowei.github.io/issues"
+  },
+  "homepage": "https://github.com/bluexiaowei/bluexiaowei.github.io#readme",
+  "dependencies": {
+    "docsify-cli": "^4.4.2"
+  }
+}
