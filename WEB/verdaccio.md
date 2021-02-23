@@ -2,7 +2,7 @@
 
 > 轻量级开源私有 npm 代理注册表
 
-## 一、 安装
+## 安装
 
 ### docker
 
@@ -29,7 +29,7 @@ volumes:
   verdaccio-plugins:
 ```
 
-## 二、使用
+## 使用
 
 修改 verdaccio 配置，需要提升权限。
 
@@ -56,7 +56,6 @@ uplinks:
 设置 nginx 反向代理。
 
 ```yml
-```yml
 # /etc/nginx/sites-enabled/npm
 
 server {
@@ -71,7 +70,6 @@ server {
     proxy_set_header X-Forwarded-Proto $scheme;
   }
 }
-```
 ```
 
 检查配置 `sudo nginx -t`
