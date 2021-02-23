@@ -2,13 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>bluexiaowei.github.io</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>bluexiaowei.github.io</title>
+    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
     <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css" />
     <link rel="stylesheet" href="./assets/css/markdown.css" />
@@ -17,40 +15,27 @@
     <div id="app"></div>
 
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script async src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-    <script async src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
-    <script async src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
-    <script async src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
-    <!-- <script async src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script> -->
-    <script>
+    <script async="async" src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+    <script async="async" src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+    <script async="async" src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+    <script async="async" src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
+    <!-- <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
+    <script type="text/javascript">
       window.$docsify = {
         autoHeader: true,
         mergeNavbar: true,
         maxLevel: 4,
         auto2top: true,
         formatUpdated: '更新时间：{YYYY}-{MM}-{DD} {HH}:{mm}',
-        // formatUpdated: function(time) {
-        //   return time;
-        // },
         name: 'bluexiaowei.github.io',
         repo: 'https://bluexiaowei/bluexiaowei.github.io'
       };
     </script>
-    <script>
-      // const title = document.title;
-      // const gitalk = new Gitalk({
-      //   clientID: '4f447d08f9b658360d67',
-      //   clientSecret: '32abc4ff653864f6e5f35cc0213e3f1d7b41a85f',
-      //   repo: 'bluexiaowei.github.io',
-      //   owner: 'bluexiaowei',
-      //   admin: ['bluexiaowei'],
-      //   title: title,
-      //   id: title,
-      //   body: title,
-      //   labels: ['Blog'],
-      //   distractionFreeMode: false
-      // });
+
+    <script type="text/javascript">
+      if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('./assets/js/sw.js')
+      }
     </script>
   </body>
 </html>
