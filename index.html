@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <title>bluexiaowei.github.io</title>
-    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
     <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css" />
     <link rel="stylesheet" href="./assets/css/markdown.css" />
@@ -15,28 +18,29 @@
     <div id="app"></div>
 
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-    <script async="async" src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-    <script async="async" src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
-    <script async="async" src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
-    <script async="async" src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
-    <script async="async" src="//unpkg.com/prismjs/components/prism-tsx.min.js"></script>
-    <!-- <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
     <script type="text/javascript">
       window.$docsify = {
         autoHeader: true,
         mergeNavbar: true,
         maxLevel: 4,
         auto2top: true,
-        formatUpdated: '更新时间：{YYYY}-{MM}-{DD} {HH}:{mm}',
-        name: 'bluexiaowei.github.io',
-        repo: 'https://bluexiaowei/bluexiaowei.github.io'
+        formatUpdated: "更新时间：{YYYY}-{MM}-{DD} {HH}:{mm}",
+        name: "bluexiaowei.github.io",
+        repo: "https://bluexiaowei/bluexiaowei.github.io",
       };
     </script>
 
     <script type="text/javascript">
-      if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('./assets/js/sw.js')
+      if (typeof navigator.serviceWorker !== "undefined") {
+        navigator.serviceWorker.register("./assets/js/sw.js");
       }
     </script>
+
+    <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-jsx.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-tsx.min.js"></script>
   </body>
 </html>
