@@ -17,7 +17,9 @@ default default function(){
     const [form] = Form.useForm();
 
     const onKeyDown = useCallback((e: React.KeyboardEvent<HTMLTextAreaElement>)=>{
-        if (['altKey', 'ctrlKey', 'shiftKey'].some(key => e[key]) && e.key === 'Enter') {
+        const keys: Array<'altKey' | 'ctrlKey' | 'shiftKey'> = ['altKey', 'ctrlKey', 'shiftKey'];
+
+        if (keys.some(key => e[key]) && e.key === 'Enter') {
             // 阻断默认事件
             e.preventDefault();
             // 如果是组合键就输入换行符
