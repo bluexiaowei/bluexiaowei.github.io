@@ -1,6 +1,4 @@
-# 简介
-
-预览地址：[https://bluexiaowei.github.io](https://bluexiaowei.github.io)
+# bluexiaowei.github.io 
 
 ## 前言
 
