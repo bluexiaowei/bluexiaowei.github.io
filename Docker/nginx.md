@@ -1,5 +1,7 @@
 # Docker 部署 Nginx 服务器
 
+> nginx 是一款轻量级 WEB 服务器。
+
 ## 安装 docker-compose
 
 
