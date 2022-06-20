@@ -6,6 +6,7 @@
 
 - [windows 10](/docs/windows10.md)
 - [替换源](/docs/replaceSource.md)
+- [常用软件](/docs/software.md)
 
 ## Software
 
