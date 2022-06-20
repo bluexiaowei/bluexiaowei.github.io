@@ -1,6 +1,21 @@
 # Docker
 
+## sudo
+
+```bash
+# 创建用户组
+$ sudo groupadd docker
+
+# 添加用户组
+$ sudo gpasswd -a ${USER} docker
+
+# 重启 docker
+$ sudo service docker restart
+```
+
 ## Compose
+
+> 最新版本 docker 默认使用 v2 版本
 
 ### V1
 
@@ -28,6 +43,41 @@ $ sudo pip uninstall docker-compose
 /usr/local/lib/docker/cli-plugins 或者/usr/local/libexec/docker/cli-plugins
 /usr/lib/docker/cli-plugins 或者/usr/libexec/docker/cli-plugins
 （可能需要使下载的文件可执行 chmod +x）
+
+### FAQ
+
+#### 两个容器之间互联 network 使用 container_name 连接
+
+```yml
+services:
+  mongo:
+    container_name: app-db
+    image: mongo
+    volumes:
+      - app-mongo:/data/db
+    networks:
+      - app-netword
+  serve:
+    container_name: app-serve
+    image: node:alpine3.11
+    ports:
+      - 3000:3000
+    working_dir: /app
+    command: sh -c "npm install && npm run build && npm run start:prod"
+    environment:
+      MONGO_URI: mongodb://app-db/pwd?authSource=admin
+      PASSWORD_KEY: Hmac_SHA512
+      REGISTER_PIN: 7758
+      TOKEN_KEY: pwd
+    volumes:
+      - "./:/app"
+    networks:
+      - app-netword
+volumes:
+  app-mongo:
+networks:
+  app-netword:
+```
 
 ## 文献
 
