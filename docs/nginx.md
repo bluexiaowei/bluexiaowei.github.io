@@ -1,13 +1,14 @@
-# Nginx 服务器
+# Nginx
 
 > nginx 是一款轻量级 WEB 服务器。
 
-## 创建配置文件
+## 部署
 
-#### docker-compose.yml
+### docker
+
+**~/nginx/docker-compose.yml**
 
 ```yml
-## ~/nginx/docker-compose.yml
 version: "2"
 
 services:
@@ -22,11 +23,9 @@ services:
       - "/root/nginx/html:/usr/share/nginx/html"
 ```
 
-#### default.conf
+**~/nginx/conf.d/default.conf**
 
 ```
-## ~/nginx/conf.d/default.conf
-
 server {
     listen       80;
     server_name  localhost;
@@ -73,10 +72,9 @@ server {
 }
 ```
 
-#### nginx.conf
+**~/nginx/nginx.conf**
 
 ```
-## ~/nginx/nginx.conf
 user  nginx;
 worker_processes  1;
 
@@ -110,12 +108,12 @@ http {
 }
 ```
 
-### 启动
+启动命令
 
-```
-cd ~/nginx
+```bash
+$ cd ~/nginx
 
-docker-compose up -d
+$ docker-compose up -d
 ```
 
 ## 参考文献

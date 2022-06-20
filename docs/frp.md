@@ -1,13 +1,14 @@
-# Docker 部署 Frp 内网穿透
+# Frp
 
 > frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。
 
-## 创建配置文件
+## 部署
 
-#### docker-compose.yml
+### Docker
+
+**~/frp/docker-compose.yml**
 
 ```yml
-## ~/frp/docker-compose.yml
 version: "2"
 services:
   frp:
@@ -19,10 +20,9 @@ services:
       - "/root/frp/frps.ini:/etc/frp/frps.ini"
 ```
 
-#### frps.ini 
+**~/frp/frps.ini**
 
 ```
-## ~/frp/frps.ini
 [common]
 bind_port = 10000
 vhost_http_port = 10001
