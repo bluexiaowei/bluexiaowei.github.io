@@ -4,11 +4,21 @@
 
 ## 安装
 
+### Ubuntu
 ```bash
 $ sudo apt install certbot
 ```
 
-## 执行
+### Docker
+
+```bash
+docker run -it --rm --name certbot \
+    -v $PWD:/etc/letsencrypt \
+    certbot/certbot \
+    certonly --manual --preferred-challenges=dns-01 
+```
+
+## 认证过程
 
 手动生成 `.pem` 格式的证书
 
@@ -53,7 +63,7 @@ Are you OK with your IP being logged?
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 (Y)es/(N)o: Y
 
-## 设置 dns 解析，并且校验。
+## 设置 dns 解析，并且校验。（参考阿里云设置 DNS 校验示例图）
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Please deploy a DNS TXT record under the name
 _acme-challenge.example.com with the following value:
@@ -97,6 +107,6 @@ IMPORTANT NOTES:
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 ```
-设置 dns 解析，并且校验,如图。
+阿里云设置 DNS 校验，如下图。
 
 ![阿里云添加 DNS 解析](../assets/img/certbot-01.png)

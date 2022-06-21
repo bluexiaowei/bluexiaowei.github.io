@@ -1,10 +1,16 @@
-# Nginx
+# Docker compose 启动 Nginx
 
-> nginx 是一款轻量级 WEB 服务器。
+> docker-compose.yml 启动 Nginx 避免污染宿主机，想怎么玩就怎么玩。
 
-## 部署
+创建相关目录
 
-### docker
+- `~/nginx`: nginx 所有项目配置都存放在这个目录里面
+- `~/nginx/conf.d`: 存放 nginx 服务配置文件夹
+- `~/nginx/log`: 存放 nginx 日志
+- `~/nginx/html`: 存放 nginx 静态资源
+- `~/nginx/cert`: 存放 https 证书和密钥
+
+创建相关文件
 
 **~/nginx/docker-compose.yml**
 
@@ -21,6 +27,42 @@ services:
       - "/root/nginx/conf.d:/etc/nginx/conf.d"
       - "/root/nginx/log:/var/log/nginx/"
       - "/root/nginx/html:/usr/share/nginx/html"
+```
+
+**~/nginx/nginx.conf**
+
+```
+user  nginx;
+worker_processes  1;
+
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    include /etc/nginx/conf.d/*.conf;
+}
 ```
 
 **~/nginx/conf.d/default.conf**
@@ -72,42 +114,6 @@ server {
 }
 ```
 
-**~/nginx/nginx.conf**
-
-```
-user  nginx;
-worker_processes  1;
-
-error_log  /var/log/nginx/error.log warn;
-pid        /var/run/nginx.pid;
-
-
-events {
-    worker_connections  1024;
-}
-
-
-http {
-    include       /etc/nginx/mime.types;
-    default_type  application/octet-stream;
-
-    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                      '$status $body_bytes_sent "$http_referer" '
-                      '"$http_user_agent" "$http_x_forwarded_for"';
-
-    access_log  /var/log/nginx/access.log  main;
-
-    sendfile        on;
-    #tcp_nopush     on;
-
-    keepalive_timeout  65;
-
-    #gzip  on;
-
-    include /etc/nginx/conf.d/*.conf;
-}
-```
-
 启动命令
 
 ```bash
@@ -115,10 +121,6 @@ $ cd ~/nginx
 
 $ docker-compose up -d
 ```
-
-
-
-
 
 ## 参考文献
 
