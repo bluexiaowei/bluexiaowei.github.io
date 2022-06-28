@@ -9,6 +9,8 @@
 - [docker-compose 启动 nginx](/docs/nginx_docker.md)
 - [Reactjs + AntdForm + TextArea 替换回车键](/docs/onEnterReplace.md)
 - [npm 更换源](/docs/javascript_npm_source.md)
+- [使用指定源安装私有 npm](/docs/javascript_npm_org.md)
+- [ssh 免密登录](/docs/ssh_automatic_login.md)
 
 ## System
 
