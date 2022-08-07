@@ -17,6 +17,7 @@
 - [windows 10](/docs/windows_10.md)
 - [替换源](/docs/replace_source.md)
 - [常用软件](/docs/software.md)
+- [小米路由器4A OpenWrt](/docs/xiaomi4a_openwrt.md)
 
 ## Software
 
